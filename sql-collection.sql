@@ -94,5 +94,12 @@ EXCEPTION
 END;/
 
 
+--show table column definitions
+SELECT table_name, column_name, data_type, data_length
+FROM USER_TAB_COLUMNS WHERE table_name = 'students'
 
+--decode 
+SELECT std_name,
+DECODE(country, DE, 'Banana', CH, 'Orange', 'Papaya') std_source
+FROM students;
 
